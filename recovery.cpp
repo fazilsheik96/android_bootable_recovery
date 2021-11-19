@@ -825,9 +825,9 @@ Device::BuiltinAction start_recovery(Device* device, const std::vector<std::stri
     ui->SetStage(st_cur, st_max);
   }
 
-  // Using props to show LMODroid Verion and Build date.
+  // Using props to show AOSPA Verion and Build date.
   std::vector<std::string> title_lines = {
-    "Build date: " + android::base::GetProperty("ro.lmodroid.build_date", "(unknown)") + " - " +"Version: " + android::base::GetProperty("ro.lmodroid.version", "(unknown)")
+    "Build date: " + android::base::GetProperty("ro.aospa.build_date", "(unknown)") + " - " +"Version: " + android::base::GetProperty("ro.aospa.version", "(unknown)")
   };
   title_lines.push_back("Product name - " + android::base::GetProperty("ro.product.device", ""));
   if (android::base::GetBoolProperty("ro.build.ab_update", false)) {
